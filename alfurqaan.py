@@ -1,8 +1,4 @@
-import sys
-import time
 import cv2
-import numpy as np
-import os
 from pathlib import Path
 import playsound
 import tkinter
@@ -59,6 +55,8 @@ class al_Furqaan:
 		p.write(str(a+1)) #update ayah number
 		p.close()
 		return tff[int(a)-1]
+	def page_recite(self):
+		pass
 		
 
 
