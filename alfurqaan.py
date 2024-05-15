@@ -7,8 +7,7 @@ class al_Furqaan:
 	
 	def __init__(self,surah=1,ayah=0):
 		BASE_DIR = str(Path(__file__).resolve().parent)+'/alQuran/'
-		self.path = BASE_DIR #+self.ayah_image_name
-		#print(self.path)
+		self.path = BASE_DIR
 		self.surah = surah
 		self.ayah = ayah
 		self.format_ayah_audio()
@@ -16,7 +15,6 @@ class al_Furqaan:
 
 	def format_ayah_image(self):
 		self.ayah_image_name = str(self.surah)+'_'+str(self.ayah)+".png"
-		#print(self.ayah_image_name)
 
 	def format_ayah_audio(self):
 		self.ayah_audio_name = str(self.surah).zfill(3)+str(self.ayah).zfill(3)+".mp3"
@@ -69,4 +67,3 @@ else:
 	surahayah = input('Input surah and ayah number : ')
 	a = al_Furqaan(surahayah.split(' ')[0],surahayah.split(' ')[1])
 	a.ayah_recite_and_show()
-	print(__name__)
